@@ -1,0 +1,23 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+pipeline_user = "arn:aws:iam::224761220970:user/aws-sam-cli-managed-sam-start-pipelin-PipelineUser-1NWGFCZPR0RZN"
+
+[sam-start]
+[sam-start.pipeline_bootstrap]
+[sam-start.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::224761220970:role/aws-sam-cli-managed-sam-star-PipelineExecutionRole-1GVUQ4PNKDTI4"
+cloudformation_execution_role = "arn:aws:iam::224761220970:role/aws-sam-cli-managed-sam-s-CloudFormationExecutionR-1KQ3Y0T5EHOPG"
+artifacts_bucket = "aws-sam-cli-managed-sam-start-pip-artifactsbucket-eublb411nb0l"
+image_repository = ""
+region = "us-east-1"
+
+[sam-build-test]
+[sam-build-test.pipeline_bootstrap]
+[sam-build-test.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::224761220970:role/aws-sam-cli-managed-sam-buil-PipelineExecutionRole-1ORA0DM7UMZX"
+cloudformation_execution_role = "arn:aws:iam::224761220970:role/aws-sam-cli-managed-sam-b-CloudFormationExecutionR-1BRUZLO27AJ2J"
+artifacts_bucket = "aws-sam-cli-managed-sam-build-tes-artifactsbucket-1dczc6dve524e"
+image_repository = ""
+region = "us-east-1"
