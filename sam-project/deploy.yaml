@@ -15,21 +15,7 @@ Resources:
       CodeUri: s3://sambucket-code/c6ce8fa8b5a97dd022ecd006536eb5a4
       Handler: app.lambda_handler
       Runtime: python3.9
-      Architectures:
-      - x86_64
-      Events:
-        HelloWorld:
-          Type: Api
-          Properties:
-            Path: /hello
-            Method: get
-    Metadata:
-      SamResourceId: HelloWorldFunction
-Outputs:
-  HelloWorldApi:
-    Description: API Gateway endpoint URL for Prod stage for Hello World function
-    Value:
-      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/
+     
   HelloWorldFunction:
     Description: Hello World Lambda Function ARN
     Value:
